@@ -18,7 +18,6 @@ export class UserDetailService{
 
     async createUser(user : any) : Promise<userDetailDto[]>{
         const newUser = this.userRepository.create(user);
-        console.log(newUser,'newUser')
         return this.userRepository.save(newUser);
     }
 
